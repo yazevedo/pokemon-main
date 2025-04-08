@@ -1,0 +1,66 @@
+.carousel-wrapper {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, #4fc3f7, #e1f5fe);
+    min-height: 100vh;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+  
+    h2 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+    button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  
+      &:hover:not(:disabled) {
+        background-color: #1565c0;
+      }
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  .pokemon-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  
+    img {
+      width: 120px;
+      height: 120px;
+      image-rendering: pixelated;
+    }
+  
+    h3 {
+      margin: 10px 0 5px;
+    }
+  
+    p {
+      margin: 0;
+      color: #666;
+    }
+  }
+  

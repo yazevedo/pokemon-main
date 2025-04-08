@@ -1,0 +1,21 @@
+<div class="layout-container">
+    <header class="header">
+        <nav class="nav">
+            <a routerLink="/app/pokedex">Pokedex</a>
+            <a routerLink="/app/carousel">Carousel</a>
+            <a routerLink="/app/crud">CRUD</a>
+            <button (click)="logout()">Sair</button>
+          </nav>
+          
+          
+    </header>
+  
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  
+    <footer class="footer">
+      <p>&copy; 2025 Minha Aplicação Angular. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+  

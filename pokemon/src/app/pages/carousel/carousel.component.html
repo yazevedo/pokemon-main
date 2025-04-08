@@ -1,0 +1,16 @@
+<div class="carousel-wrapper" *ngIf="pokemons.length > 0">
+    <h2>Pokémon em Destaque</h2>
+  
+    <div class="carousel">
+      <button (click)="previous()" [disabled]="currentIndex === 0">⟨</button>
+  
+      <div class="pokemon-card">
+        <img [src]="pokemons[currentIndex].sprites.front_default" alt="{{ pokemons[currentIndex].name }}">
+        <h3>{{ pokemons[currentIndex].name | titlecase }}</h3>
+        <p>#{{ pokemons[currentIndex].id }}</p>
+      </div>
+  
+      <button (click)="next()" [disabled]="currentIndex === pokemons.length - 1">⟩</button>
+    </div>
+  </div>
+  

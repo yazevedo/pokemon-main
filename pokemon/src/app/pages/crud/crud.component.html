@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Cadastro de Itens com Imagem</h2>
+  
+    <form (ngSubmit)="submit()">
+      <div class="form-group">
+        <input type="text" placeholder="Nome do item" [(ngModel)]="name" name="name" required />
+      </div>
+  
+      <div class="form-group">
+        <input type="file" (change)="onFileChange($event)" required />
+      </div>
+  
+      <div class="image-preview" *ngIf="imagePreview">
+        <img [src]="imagePreview" alt="Pré-visualização da imagem" />
+      </div>
+  
+      <button type="submit">Cadastrar</button>
+    </form>
+  
+    <hr />
+  
+    <h3>Itens Cadastrados</h3>
+    <div class="item-list">
+      <div class="item" *ngFor="let item of items">
+        <img [src]="'http://localhost:3000/uploads/' + item.image" alt="{{item.name}}" />
+        <p>{{ item.name }}</p>
+        <button (click)="delete(item.id)">Excluir</button>
+      </div>
+    </div>
+  </div>
+  
